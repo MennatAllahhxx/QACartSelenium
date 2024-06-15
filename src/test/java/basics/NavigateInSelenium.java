@@ -17,6 +17,8 @@ public class NavigateInSelenium {
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         driver.navigate().to("https://www.qacart.com");
+        driver.navigate().back();
+        driver.navigate().forward();
 
         driver.quit();
     }
