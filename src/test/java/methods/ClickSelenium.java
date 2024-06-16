@@ -28,11 +28,14 @@ public class ClickSelenium {
         driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("menna@gmail.com");
         driver.findElement(By.cssSelector("[data-testid=password]")).sendKeys("Test@1234");
         driver.findElement(By.cssSelector("[id=submit]")).click();
-        //driver.findElement(By.cssSelector("[data-testid=complete-task]")).click();
+        driver.findElement(By.cssSelector("[data-testid=complete-task]")).click();
 
         boolean taskIsSelected = driver.findElement(By.cssSelector("[data-testid=complete-task]")).isSelected();
         System.out.println(taskIsSelected);
 
-        //driver.quit();
+        String name = driver.findElement(By.cssSelector("[data-testid=complete-task]")).getAttribute("name");
+        System.out.println(name);
+
+        driver.quit();
     }
 }
