@@ -5,7 +5,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import javax.sound.midi.Receiver;
 import java.time.Duration;
 
 public class ClickSelenium {
