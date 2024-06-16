@@ -21,12 +21,15 @@ public class ClickSelenium {
 
         boolean emailIsDisplayed = driver.findElement(By.cssSelector("[data-testid=email]")).isDisplayed();
         System.out.println(emailIsDisplayed);
+
+        boolean emailIsEnabled = driver.findElement(By.cssSelector("[data-testid=email]")).isEnabled();
+        System.out.println(emailIsEnabled);
         
         driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("menna@gmail.com");
         driver.findElement(By.cssSelector("[data-testid=password]")).sendKeys("Test@1234");
         driver.findElement(By.cssSelector("[id=submit]")).click();
         driver.findElement(By.cssSelector("[data-testid=complete-task]")).click();
 
-        //driver.quit();
+        driver.quit();
     }
 }
