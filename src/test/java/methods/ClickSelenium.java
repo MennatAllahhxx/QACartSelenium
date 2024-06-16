@@ -39,6 +39,9 @@ public class ClickSelenium {
         String tagName = driver.findElement(By.cssSelector("[data-testid=complete-task]")).getTagName();
         System.out.println(tagName);
 
+        String cssValue = driver.findElement(By.cssSelector("[data-testid=todo-item]")).getCssValue("background-color");
+        System.out.println(cssValue);
+
         driver.quit();
     }
 }
