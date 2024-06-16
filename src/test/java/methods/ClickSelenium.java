@@ -14,10 +14,11 @@ public class ClickSelenium {
         WebDriver driver = new ChromeDriver(options);
 
         driver.manage().window().maximize();
-        driver.get("https://hatem-hatamleh.github.io/Selenium-html/actions.html");
+        driver.get("https://todo.qacart.com/");
 
-        driver.findElement(By.cssSelector("[name=firstName]")).sendKeys("menna");
-        driver.findElement(By.cssSelector("[name=lastName]")).sendKeys("hassan");
+        driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("menna@gmail.com");
+        driver.findElement(By.cssSelector("[data-testid=password]")).sendKeys("Test@1234");
+        driver.findElement(By.cssSelector("[id=submit]")).click();
 
         //driver.quit();
     }
