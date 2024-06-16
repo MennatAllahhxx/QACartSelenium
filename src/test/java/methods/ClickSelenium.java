@@ -19,6 +19,9 @@ public class ClickSelenium {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://todo.qacart.com/");
 
+        boolean emailIsDisplayed = driver.findElement(By.cssSelector("[data-testid=email]")).isDisplayed();
+        System.out.println(emailIsDisplayed);
+        
         driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("menna@gmail.com");
         driver.findElement(By.cssSelector("[data-testid=password]")).sendKeys("Test@1234");
         driver.findElement(By.cssSelector("[id=submit]")).click();
