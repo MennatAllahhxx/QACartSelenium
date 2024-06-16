@@ -23,6 +23,9 @@ public class ClickSelenium {
 
         boolean emailIsEnabled = driver.findElement(By.cssSelector("[data-testid=email]")).isEnabled();
         System.out.println(emailIsEnabled);
+
+        String accessibleName = driver.findElement(By.cssSelector("[data-testid=email]")).getAccessibleName();
+        System.out.println(accessibleName);
         
         driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("menna@gmail.com");
         driver.findElement(By.cssSelector("[data-testid=password]")).sendKeys("Test@1234");
