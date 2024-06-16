@@ -26,6 +26,9 @@ public class ClickSelenium {
 
         String accessibleName = driver.findElement(By.cssSelector("[data-testid=email]")).getAccessibleName();
         System.out.println(accessibleName);
+
+        String ariaRole = driver.findElement(By.cssSelector("[id=submit]")).getAriaRole();
+        System.out.println(ariaRole);
         
         driver.findElement(By.cssSelector("[data-testid=email]")).sendKeys("menna@gmail.com");
         driver.findElement(By.cssSelector("[data-testid=password]")).sendKeys("Test@1234");
