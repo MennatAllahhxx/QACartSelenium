@@ -36,6 +36,9 @@ public class ClickSelenium {
         String name = driver.findElement(By.cssSelector("[data-testid=complete-task]")).getAttribute("name");
         System.out.println(name);
 
+        String tagName = driver.findElement(By.cssSelector("[data-testid=complete-task]")).getTagName();
+        System.out.println(tagName);
+
         driver.quit();
     }
 }
