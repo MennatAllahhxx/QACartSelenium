@@ -24,8 +24,12 @@ public class DropDownSelenium {
         coursesDropDown.selectByVisibleText("wdiocourse");
 
         Actions action = new Actions(driver);
+
         WebElement doubleClickButton = driver.findElement(By.cssSelector(".double"));
         action.doubleClick(doubleClickButton).perform();
+
+        WebElement rightClickButton = driver.findElement(By.cssSelector(".right"));
+        action.contextClick(rightClickButton).perform();
 
         //driver.quit();
     }
