@@ -1,13 +1,11 @@
 package methods;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import javax.sound.midi.Receiver;
 import java.time.Duration;
 
 public class ClickSelenium {
@@ -49,6 +47,10 @@ public class ClickSelenium {
 
         Dimension size = driver.findElement(By.cssSelector("[data-testid=complete-task]")).getSize();
         System.out.println(size.height);
+
+        Rectangle rect = driver.findElement(By.cssSelector("[data-testid=complete-task]")).getRect();
+        System.out.println(rect.x);
+        System.out.println(rect.height);
 
         driver.quit();
     }
