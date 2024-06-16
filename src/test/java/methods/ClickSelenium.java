@@ -2,6 +2,7 @@ package methods;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -41,6 +42,9 @@ public class ClickSelenium {
 
         String cssValue = driver.findElement(By.cssSelector("[data-testid=todo-item]")).getCssValue("background-color");
         System.out.println(cssValue);
+
+        Point location = driver.findElement(By.cssSelector("[data-testid=complete-task]")).getLocation();
+        System.out.println(location.x);
 
         driver.quit();
     }
