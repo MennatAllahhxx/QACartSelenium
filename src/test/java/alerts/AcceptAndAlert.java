@@ -18,6 +18,7 @@ public class AcceptAndAlert {
 
         driver.findElement(By.className("alert")).click();
         Thread.sleep(500);
+        System.out.println(driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
 
         //driver.quit();
