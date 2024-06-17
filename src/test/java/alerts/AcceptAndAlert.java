@@ -21,6 +21,6 @@ public class AcceptAndAlert {
         System.out.println(driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
 
-        //driver.quit();
+        driver.quit();
     }
 }
