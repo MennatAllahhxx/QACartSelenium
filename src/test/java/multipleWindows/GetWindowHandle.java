@@ -35,6 +35,9 @@ public class GetWindowHandle {
             }
         }
 
+        driver.switchTo().window(parentWindow);
+        driver.findElement(By.cssSelector(".youtube")).click();
+
         driver.quit();
     }
 }
