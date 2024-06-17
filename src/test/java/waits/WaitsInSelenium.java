@@ -25,16 +25,12 @@ public class WaitsInSelenium {
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //driver.findElement(By.className("primary")).click();
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.className("primary")))
-                        .click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.className("cover")));
-
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.invisibilityOfElementLocated(By.className("cover")));
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("primary"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("cover")));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("cover")));
+        
         driver.findElement(By.className("secondary")).click();
         
         driver.quit();
