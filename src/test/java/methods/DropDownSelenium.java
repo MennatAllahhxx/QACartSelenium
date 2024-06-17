@@ -34,6 +34,10 @@ public class DropDownSelenium {
         WebElement trigger = driver.findElement(By.cssSelector(".trigger"));
         action.moveToElement(trigger).perform();
 
+        WebElement source = driver.findElement(By.cssSelector("#draggable-3"));
+        WebElement destination = driver.findElement(By.cssSelector(".example-dropzone"));
+        action.dragAndDrop(source, destination).perform();
+        
         //driver.quit();
     }
 }
