@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -20,9 +23,12 @@ public class WaitsInSelenium {
 
         //Thread.sleep(4000);
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.findElement(By.className("primary")).click();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driver.findElement(By.className("primary")).click();
 
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.className("primary")))
+                        .click();
         driver.quit();
     }
 }
