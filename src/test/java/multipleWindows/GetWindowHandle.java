@@ -26,6 +26,15 @@ public class GetWindowHandle {
         Set<String> allWindows = driver.getWindowHandles();
         System.out.println(allWindows);
 
+        for (String window: allWindows) {
+            if (!window.equalsIgnoreCase(parentWindow)) {
+                System.out.println(driver.getTitle());
+                driver.switchTo().window(window);
+                System.out.println(driver.getTitle());
+                driver.close();
+            }
+        }
+
         driver.quit();
     }
 }
