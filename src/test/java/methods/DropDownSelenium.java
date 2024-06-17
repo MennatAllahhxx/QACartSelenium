@@ -31,6 +31,9 @@ public class DropDownSelenium {
         WebElement rightClickButton = driver.findElement(By.cssSelector(".right"));
         action.contextClick(rightClickButton).perform();
 
+        WebElement trigger = driver.findElement(By.cssSelector(".trigger"));
+        action.moveToElement(trigger).perform();
+
         //driver.quit();
     }
 }
