@@ -23,6 +23,10 @@ public class HandleFrames {
 
         driver.switchTo().parentFrame();
 
+        driver.switchTo().frame("menu");
+        driver.switchTo().frame("links");
+        System.out.println(driver.findElement(By.id("welcome")).getText());
+
         driver.quit();
     }
 }
